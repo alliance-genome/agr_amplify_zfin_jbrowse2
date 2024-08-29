@@ -46,20 +46,20 @@
   "aggregateTextSearchAdapters": [
     {
       "namesIndexLocation": {
-        "uri": "https://s3.amazonaws.com/agrjbrowse/docker/7.1.0/zfin/zebrafish-11/names/"
+        "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/names/"
       },
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "type": "JBrowse1TextSearchAdapter",
-      "textSearchAdapterId": "zebrafish_generate-names-index"
+      "textSearchAdapterId": "GRCz11_generate-names-index"
     }
   ],
   "assemblies": [
     {
-      "name": "Danio_rerio",
-      "displayName": "Danio rerio",
+      "name": "GRCz11",
+      "displayName": "Danio rerio (GRCz11)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
-        "trackId": "Danio_rerio_refseq",
+        "trackId": "GRCz11_refseq",
         "adapter": {
           "type": "BgzipFastaAdapter",
           "fastaLocation": {
@@ -82,11 +82,11 @@
         "displays": [
           {
             "type": "LinearReferenceSequenceDisplay",
-            "displayId": "Danio_rerio_refseq-LinearReferenceSequenceDisplay"
+            "displayId": "GRCz11_refseq-LinearReferenceSequenceDisplay"
           },
           {
             "type": "LinearGCContentDisplay",
-            "displayId": "Danio_rerio_refseq-LinearGCContentDisplay"
+            "displayId": "GRCz11_refseq-LinearGCContentDisplay"
           }
         ]
       }
@@ -95,9 +95,9 @@
   "tracks": [
     {
       "type": "FeatureTrack",
-      "trackId": "Danio_rerio_all_genes",
+      "trackId": "GRCz11_all_genes",
       "name": "All Genes",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "adapter": {
         "type": "NCListAdapter",
         "rootUrlTemplate": {
@@ -108,7 +108,7 @@
       "displays": [
         {
           "type": "LinearBasicDisplay",
-          "displayId": "Danio_rerio_all_genes-LinearBasicDisplay",
+          "displayId": "GRCz11_all_genes-LinearBasicDisplay",
           "renderer": {
             "maxHeight": 5000,
             "type": "SvgFeatureRenderer",
@@ -118,7 +118,7 @@
         },
         {
           "type": "LinearArcDisplay",
-          "displayId": "Danio_rerio_all_genes-LinearArcDisplay"
+          "displayId": "GRCz11_all_genes-LinearArcDisplay"
         }
       ]
     },
@@ -126,7 +126,7 @@
       "type": "FeatureTrack",
       "trackId": "zfin_gene",
       "name": "ZFIN Gene",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "formatDetails": {
         "feature": "jexl:{id:null,curie:null,ZFIN:'<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
       },
@@ -158,7 +158,7 @@
       "type": "FeatureTrack",
       "trackId": "zfin_transcript",
       "name": "Transcript",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "adapter": {
         "type": "NCListAdapter",
         "rootUrlTemplate": {
@@ -189,7 +189,7 @@
       "type": "FeatureTrack",
       "trackId": "zfin_genes_with_phenotype",
       "name": "ZFIN Genes with Phenotype",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.gene_id+' \">'+feature.name+'</a>'}"
@@ -216,7 +216,7 @@
       "type": "FeatureTrack",
       "trackId": "zfin_genes_with_antibody_data",
       "name": "ZFIN Genes with Antibody Data",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.gene_id+' \">'+feature.name+'</a>'}"
@@ -243,7 +243,7 @@
       "type": "FeatureTrack",
       "trackId": "zfin_genes_with_expression",
       "name": "ZFIN Genes with Expression",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.gene_id+' \">'+feature.name+'</a>'}"
@@ -270,7 +270,7 @@
       "type": "FeatureTrack",
       "trackId": "zfin_complete_assembly_clones",
       "name": "Complete Assembly Clones",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
@@ -302,7 +302,7 @@
       "type": "FeatureTrack",
       "trackId": "zfin_additional_transcripts",
       "name": "Additional Transcripts",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "category": ["ZFIN tracks"],
       "adapter": {
         "type": "NCListAdapter",
@@ -330,7 +330,7 @@
       "type": "FeatureTrack",
       "trackId": "zfin_knockdown_reagent",
       "name": "Knockdown Reagent",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
@@ -361,7 +361,7 @@
       "type": "FeatureTrack",
       "trackId": "zfin_assembly",
       "name": "Assembly",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
@@ -392,7 +392,7 @@
       "type": "FeatureTrack",
       "trackId": "zfin_zebrafish_mutation_project",
       "name": "Zebrafish Mutation Project",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
@@ -423,7 +423,7 @@
       "type": "FeatureTrack",
       "trackId": "zfin_features",
       "name": "ZFIN Features",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
@@ -454,7 +454,7 @@
       "type": "FeatureTrack",
       "trackId": "zfin_transgenic_insertion",
       "name": "Transgenic Insertion",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
@@ -483,9 +483,9 @@
     },
     {
       "type": "VariantTrack",
-      "trackId": "Danio_rerio_variants",
+      "trackId": "GRCz11_variants",
       "name": "Variants",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "adapter": {
         "type": "VcfTabixAdapter",
         "vcfGzLocation": {
@@ -511,19 +511,19 @@
             "color1": "jexl:variantColor(feature)"
           },
           "type": "LinearVariantDisplay",
-          "displayId": "Danio_rerio_variants-LinearVariantDisplay"
+          "displayId": "GRCz11_variants-LinearVariantDisplay"
         },
         {
           "type": "ChordVariantDisplay",
-          "displayId": "Danio_rerio_variants-ChordVariantDisplay"
+          "displayId": "GRCz11_variants-ChordVariantDisplay"
         }
       ]
     },
     {
       "type": "VariantTrack",
-      "trackId": "Danio_rerio_ht_variants",
+      "trackId": "GRCz11_ht_variants",
       "name": "High Throughput Variants",
-      "assemblyNames": ["Danio_rerio"],
+      "assemblyNames": ["GRCz11"],
       "adapter": {
         "type": "VcfTabixAdapter",
         "vcfGzLocation": {
@@ -545,11 +545,11 @@
             "color1": "jexl:htVariantColor(feature)"
           },
           "type": "LinearVariantDisplay",
-          "displayId": "Danio_rerio_ht_variants-LinearVariantDisplay"
+          "displayId": "GRCz11_ht_variants-LinearVariantDisplay"
         },
         {
           "type": "ChordVariantDisplay",
-          "displayId": "Danio_rerio_ht_variants-ChordVariantDisplay"
+          "displayId": "GRCz11_ht_variants-ChordVariantDisplay"
         }
       ]
     }
