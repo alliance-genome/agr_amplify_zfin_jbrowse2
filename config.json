@@ -51,6 +51,14 @@
       "assemblyNames": ["GRCz11"],
       "type": "JBrowse1TextSearchAdapter",
       "textSearchAdapterId": "GRCz11_generate-names-index"
+    },
+    {
+      "namesIndexLocation": {
+        "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/GRCz10/names/"
+      },
+      "assemblyNames": ["GRCz10"],
+      "type": "JBrowse1TextSearchAdapter",
+      "textSearchAdapterId": "GRCz10_generate-names-index"
     }
   ],
   "assemblies": [
@@ -87,6 +95,39 @@
           {
             "type": "LinearGCContentDisplay",
             "displayId": "GRCz11_refseq-LinearGCContentDisplay"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GRCz10",
+      "displayName": "Danio rerio (GRCz10)",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "trackId": "GRCz10_refseq",
+        "adapter": {
+          "type": "BgzipFastaAdapter",
+          "fastaLocation": {
+            "locationType": "UriLocation",
+            "uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCA_018400075.1_ASM1840007v1_genomic.fna.gz"
+          },
+          "faiLocation": {
+            "locationType": "UriLocation",
+            "uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCA_018400075.1_ASM1840007v1_genomic.fna.gz.fai"
+          },
+          "gziLocation": {
+            "locationType": "UriLocation",
+            "uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCA_018400075.1_ASM1840007v1_genomic.fna.gz.gzi"
+          }
+        },
+        "displays": [
+          {
+            "type": "LinearReferenceSequenceDisplay",
+            "displayId": "GRCz10_refseq-LinearReferenceSequenceDisplay"
+          },
+          {
+            "type": "LinearGCContentDisplay",
+            "displayId": "GRCz10_refseq-LinearGCContentDisplay"
           }
         ]
       }
@@ -151,6 +192,38 @@
         {
           "type": "LinearArcDisplay",
           "displayId": "zfin_gene-1687907419159-LinearArcDisplay"
+        }
+      ]
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "GRCz10_zfin_gene",
+      "name": "ZFIN Gene",
+      "assemblyNames": ["GRCz10"],
+      "formatDetails": {
+        "feature": "jexl:{id:null,curie:null,ZFIN:'<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
+      },
+      "category": ["ZFIN tracks"],
+      "adapter": {
+        "type": "NCListAdapter",
+        "rootUrlTemplate": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/GRCz10/tracks/ZFIN_Gene/{refseq}/trackData.jsonz"
+        }
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "GRCz10_zfin_gene-1687907419159-LinearBasicDisplay",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "color1": "#088080",
+            "displayMode": "reducedRepresentation"
+          }
+        },
+        {
+          "type": "LinearArcDisplay",
+          "displayId": "GRCz10_zfin_gene-1687907419159-LinearArcDisplay"
         }
       ]
     },
