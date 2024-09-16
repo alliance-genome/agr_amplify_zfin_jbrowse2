@@ -13,7 +13,6 @@
       crossorigin
     ></script>
   </head>
-  GRCz11_assembly.json
   <body>
     <h1>We're using JBrowse Linear Genome View!</h1>
     <div id="jbrowse_linear_genome_view"></div>
@@ -22,6 +21,8 @@
       import tracks from "./GRCz11_tracks.js";
       const { createViewState, JBrowseLinearGenomeView } =
         JBrowseReactLinearGenomeView;
+      const { createElement } = React;
+      const { render } = ReactDOM;
       const state = new createViewState({
         assembly,
         tracks,
