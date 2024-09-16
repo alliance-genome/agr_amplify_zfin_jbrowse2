@@ -30,28 +30,25 @@
         defaultSession: {
           id: "xuiW7e-84l-WyGvJThU1o",
           name: "zfin embedded session",
-          views: [
-            {
-              id: "gxMQbZE1BobjoKsdDLeNw",
-              type: "LinearGenomeView",
-              tracks: [
-                {
-                  id: "kQkVaBRWUDUWk7KgE4YFT",
-                  type: "FeatureTrack",
-                  configuration: "zfin_transcript",
-                  minimized: false,
-                  displays: [
-                    {
-                      id: "YdoEISkbaWh2Wr_sEhYpi",
-                      type: "LinearBasicDisplay",
-                      configuration:
-                        "transcript-1687907635485-LinearBasicDisplay",
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
+          view: {
+            id: "gxMQbZE1BobjoKsdDLeNw",
+            type: "LinearGenomeView",
+            tracks: [
+              {
+                id: "kQkVaBRWUDUWk7KgE4YFT",
+                type: "FeatureTrack",
+                configuration: "zfin_transcript",
+                displays: [
+                  {
+                    id: "YdoEISkbaWh2Wr_sEhYpi",
+                    type: "LinearBasicDisplay",
+                    configuration:
+                      "transcript-1687907635485-LinearBasicDisplay",
+                  },
+                ],
+              },
+            ],
+          },
         },
       });
       render(
