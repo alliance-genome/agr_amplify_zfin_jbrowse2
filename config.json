@@ -884,10 +884,6 @@
           },
           "type": "LinearVariantDisplay",
           "displayId": "GRCz11_variants-LinearVariantDisplay"
-        },
-        {
-          "type": "ChordVariantDisplay",
-          "displayId": "GRCz11_variants-ChordVariantDisplay"
         }
       ]
     },
@@ -918,10 +914,6 @@
           },
           "type": "LinearVariantDisplay",
           "displayId": "GRCz11_ht_variants-LinearVariantDisplay"
-        },
-        {
-          "type": "ChordVariantDisplay",
-          "displayId": "GRCz11_ht_variants-ChordVariantDisplay"
         }
       ]
     }
