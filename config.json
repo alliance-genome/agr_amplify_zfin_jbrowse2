@@ -63,6 +63,43 @@
   ],
   "assemblies": [
     {
+      "name": "GRCz12tu",
+      "displayName": "Danio rerio (GRCz12tu)",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "trackId": "GRCz12tu_refseq",
+        "adapter": {
+          "type": "BgzipFastaAdapter",
+          "fastaLocation": {
+            "locationType": "UriLocation",
+            "uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_049306965.1_GRCz12tu_genomic.fna.gz"
+          },
+          "faiLocation": {
+            "locationType": "UriLocation",
+            "uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_049306965.1_GRCz12tu_genomic.fna.gz.fai"
+          },
+          "metadataLocation": {
+            "locationType": "UriLocation",
+            "uri": ""
+          },
+          "gziLocation": {
+            "locationType": "UriLocation",
+            "uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_049306965.1_GRCz12tu_genomic.fna.gz.gzi"
+          }
+        },
+        "displays": [
+          {
+            "type": "LinearReferenceSequenceDisplay",
+            "displayId": "GRCz12tu_refseq-LinearReferenceSequenceDisplay"
+          },
+          {
+            "type": "LinearGCContentDisplay",
+            "displayId": "GRCz12tu_refseq-LinearGCContentDisplay"
+          }
+        ]
+      }
+    },
+    {
       "name": "GRCz11",
       "displayName": "Danio rerio (GRCz11)",
       "sequence": {
