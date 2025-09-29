@@ -187,7 +187,6 @@
           "formatDetails": {
             "feature": "jexl:{id:null,curie:null,ZFIN:'<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
           },
-          "category": ["ZFIN tracks"],
           "adapter": {
             "type": "NCListAdapter",
             "rootUrlTemplate": {
@@ -219,7 +218,6 @@
           "formatDetails": {
             "feature": "jexl:{id:null,curie:null,ZFIN:'<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
           },
-          "category": ["ZFIN tracks"],
           "adapter": {
             "type": "NCListAdapter",
             "rootUrlTemplate": {
@@ -232,8 +230,7 @@
               "type": "LinearBasicDisplay",
               "displayId": "refseq-12-LinearBasicDisplay",
               "renderer": {
-                "type": "SvgFeatureRenderer",
-                "displayMode": "reducedRepresentation"
+                "type": "SvgFeatureRenderer"
               }
             },
             {
