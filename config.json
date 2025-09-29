@@ -225,7 +225,6 @@
               "displayId": "refseq-12-LinearBasicDisplay",
               "renderer": {
                 "type": "SvgFeatureRenderer",
-                "color1": "#088080",
                 "displayMode": "reducedRepresentation"
               }
             },
