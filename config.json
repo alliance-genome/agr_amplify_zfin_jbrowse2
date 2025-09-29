@@ -171,6 +171,38 @@
     }
   ],
   "tracks": [
+     {
+          "type":"FeatureTrack",
+          "trackId": "zfin12_gene",
+          "name": "ZFIN Gene",
+          "assemblyNames": ["GRCz12tu"],
+          "formatDetails": {
+            "feature": "jexl:{id:null,curie:null,ZFIN:'<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
+          },
+          "category": ["ZFIN tracks"],
+          "adapter": {
+            "type": "NCListAdapter",
+            "rootUrlTemplate": {
+              "locationType": "UriLocation",
+              "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/tracks/ZFIN_Gene/{refseq}/trackData.jsonz"
+           }
+         },
+          "displays": [
+            {
+              "type": "LinearBasicDisplay",
+              "displayId": "zfin_gene-12-LinearBasicDisplay",
+              "renderer": {
+                "type": "SvgFeatureRenderer",
+                "color1": "#088080",
+                "displayMode": "reducedRepresentation"
+              }
+            },
+            {
+              "type": "LinearArcDisplay",
+              "displayId": "zfin_gene-12-LinearArcDisplay"
+            }
+          ]
+    },
     {
       "type": "FeatureTrack",
       "trackId": "GRCz11_all_genes",
