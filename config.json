@@ -179,37 +179,31 @@
     }
   ],
   "tracks": [
-     {
-          "type":"FeatureTrack",
-          "trackId": "zfin12_gene",
-          "name": "ZFIN Gene",
-          "assemblyNames": ["GRCz12tu"],
-          "formatDetails": {
-            "feature": "jexl:{id:null,curie:null,ZFIN:'<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
-          },
-          "adapter": {
-            "type": "NCListAdapter",
-            "rootUrlTemplate": {
-              "locationType": "UriLocation",
-              "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/tracks/ZFIN_Gene/{refseq}/trackData.jsonz"
-           }
-         },
-          "displays": [
-            {
-              "type": "LinearBasicDisplay",
-              "displayId": "zfin_gene-12-LinearBasicDisplay",
-              "renderer": {
-                "type": "SvgFeatureRenderer",
-                "color1": "#088080",
-                "displayMode": "reducedRepresentation"
-              }
-            },
-            {
-              "type": "LinearArcDisplay",
-              "displayId": "zfin_gene-12-LinearArcDisplay"
-            }
-          ]
+    {
+  "type": "FeatureTrack",
+  "trackId": "zfin-gene12",
+  "name": "ZFIN Gene",
+  "assemblyNames": [
+    "GRCz12tu"
+  ],
+  "adapter": {
+    "type": "NCListAdapter",
+    "rootUrlTemplate": {
+      "locationType": "UriLocation",
+      "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/GRCz12tu/tracks/ZFIN_Gene/{refseq}/trackData.jsonz"
+    }
+  },
+  "displays": [
+    {
+      "type": "LinearBasicDisplay",
+      "displayId": "trackdata.jsonz-1759182372465-sessionTrack-LinearBasicDisplay"
     },
+    {
+      "type": "LinearArcDisplay",
+      "displayId": "trackdata.jsonz-1759182372465-sessionTrack-LinearArcDisplay"
+    }
+  ]
+},
          {
           "type":"FeatureTrack",
           "trackId": "refseq12",
