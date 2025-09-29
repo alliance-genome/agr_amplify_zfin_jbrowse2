@@ -45,13 +45,13 @@
   ],
   "aggregateTextSearchAdapters": [
     {
-       "amesIndexLocation": {
+       "namesIndexLocation": {
          "uri":"https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/GRCz12tu/names/"
-   },
-   "assemblyNames": ["GRCz12tu"],
-   "type": "JBrowse1TextSearchAdapter",
-   "textSearchAdapterId": "GRCz12tu_generate-names-index"
-   },
+        },
+        "assemblyNames": ["GRCz12tu"],
+        "type": "JBrowse1TextSearchAdapter",
+        "textSearchAdapterId": "GRCz12tu_generate-names-index"
+    },
     {
       "namesIndexLocation": {
         "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/names/"
