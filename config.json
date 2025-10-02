@@ -180,6 +180,52 @@
   ],
   "tracks": [
     {
+  "type": "SyntenyTrack",
+  "trackId": "zfin11_12_genes.anchors",
+  "name": "genes between 11 and 12",
+  "assemblyNames": [
+    "GRCz11",
+    "GRCz12tu"
+  ],
+  "adapter": {
+    "type": "MCScanAnchorsAdapter",
+    "mcscanAnchorsLocation": {
+      "locationType": "UriLocation",
+      "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/comparative/zfin_combined_genes"
+    },
+    "bed1Location": {
+      "locationType": "UriLocation",
+      "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/comparative/zfin12_genes.bed"
+    },
+    "bed2Location": {
+      "locationType": "UriLocation",
+      "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/comparative/zfin11_genes.bed"
+    },
+    "assemblyNames": [
+      "GRCz12tu",
+      "GRCz11"
+    ]
+  },
+  "displays": [
+    {
+      "type": "DotplotDisplay",
+      "displayId": "zfin11_12_genes.anchors-DotplotDisplay"
+    },
+    {
+      "type": "LinearComparativeDisplay",
+      "displayId": "zfin11_12_genes.anchors-LinearComparativeDisplay"
+    },
+    {
+      "type": "LinearSyntenyDisplay",
+      "displayId": "zfin11_12_genes.anchors-LinearSyntenyDisplay"
+    },
+    {
+      "type": "LGVSyntenyDisplay",
+      "displayId": "zfin11_12_genes.anchors-LGVSyntenyDisplay"
+    }
+  ]
+},
+    {
   "type": "FeatureTrack",
   "trackId": "zfin-gene12",
   "name": "ZFIN Gene",
