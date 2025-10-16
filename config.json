@@ -281,35 +281,6 @@
     },
     {
       "type": "FeatureTrack",
-      "trackId": "GRCz11_all_genes",
-      "name": "All Genes",
-      "assemblyNames": ["GRCz11"],
-      "adapter": {
-        "type": "NCListAdapter",
-        "rootUrlTemplate": {
-          "locationType": "UriLocation",
-          "uri": "https://s3.amazonaws.com/agrjbrowse/docker/7.1.0/zfin/zebrafish-11/tracks/All_Genes/{refseq}/trackData.jsonz"
-        }
-      },
-      "displays": [
-        {
-          "type": "LinearBasicDisplay",
-          "displayId": "GRCz11_all_genes-LinearBasicDisplay",
-          "renderer": {
-            "maxHeight": 5000,
-            "type": "SvgFeatureRenderer",
-            "color3": "#30332E",
-            "color1": "jexl:get(feature,'strand')<0?'teal':'darkviolet'"
-          }
-        },
-        {
-          "type": "LinearArcDisplay",
-          "displayId": "GRCz11_all_genes-LinearArcDisplay"
-        }
-      ]
-    },
-    {
-      "type": "FeatureTrack",
       "trackId": "zfin_gene",
       "name": "ZFIN Gene",
       "assemblyNames": ["GRCz11"],
@@ -995,78 +966,6 @@
         {
           "type": "LinearArcDisplay",
           "displayId": "GRCz10_zfin_mutants-LinearArcDisplay"
-        }
-      ]
-    },
-    {
-      "type": "VariantTrack",
-      "trackId": "GRCz11_variants",
-      "name": "Variants",
-      "assemblyNames": ["GRCz11"],
-      "adapter": {
-        "type": "VcfTabixAdapter",
-        "vcfGzLocation": {
-          "locationType": "UriLocation",
-          "uri": "https://s3.amazonaws.com/agrjbrowse/VCF/7.1.0/zebrafish-latest.vcf.gz"
-        },
-        "index": {
-          "location": {
-            "locationType": "UriLocation",
-            "uri": "https://s3.amazonaws.com/agrjbrowse/VCF/7.1.0/zebrafish-latest.vcf.gz.tbi"
-          }
-        }
-      },
-      "displays": [
-        {
-          "renderer": {
-            "maxHeight": 5000,
-            "type": "SvgFeatureRenderer",
-            "labels": {
-              "name": "jexl:variantLabel(feature)",
-              "description": "jexl:variantDescription(feature)"
-            },
-            "color1": "jexl:variantColor(feature)"
-          },
-          "type": "LinearVariantDisplay",
-          "displayId": "GRCz11_variants-LinearVariantDisplay"
-        },
-        {
-          "type": "ChordVariantDisplay",
-          "displayId": "GRCz11_variants-ChordVariantDisplay"
-        }
-      ]
-    },
-    {
-      "type": "VariantTrack",
-      "trackId": "GRCz11_ht_variants",
-      "name": "High Throughput Variants",
-      "assemblyNames": ["GRCz11"],
-      "adapter": {
-        "type": "VcfTabixAdapter",
-        "vcfGzLocation": {
-          "locationType": "UriLocation",
-          "uri": "https://s3.amazonaws.com/agrjbrowse/VCF/7.1.0/HTPOSTVEPVCF_ZFIN_latest.vcf.gz"
-        },
-        "index": {
-          "location": {
-            "locationType": "UriLocation",
-            "uri": "https://s3.amazonaws.com/agrjbrowse/VCF/7.1.0/HTPOSTVEPVCF_ZFIN_latest.vcf.gz.tbi"
-          }
-        }
-      },
-      "displays": [
-        {
-          "renderer": {
-            "maxHeight": 5000,
-            "type": "SvgFeatureRenderer",
-            "color1": "jexl:htVariantColor(feature)"
-          },
-          "type": "LinearVariantDisplay",
-          "displayId": "GRCz11_ht_variants-LinearVariantDisplay"
-        },
-        {
-          "type": "ChordVariantDisplay",
-          "displayId": "GRCz11_ht_variants-ChordVariantDisplay"
         }
       ]
     }
