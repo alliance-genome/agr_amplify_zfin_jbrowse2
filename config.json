@@ -287,7 +287,6 @@
       "formatDetails": {
         "feature": "jexl:{id:null,curie:null,ZFIN:'<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
       },
-      "category": ["ZFIN tracks"],
       "adapter": {
         "type": "NCListAdapter",
         "rootUrlTemplate": {
@@ -319,7 +318,6 @@
       "formatDetails": {
         "feature": "jexl:{id:null,curie:null,ZFIN:'<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
       },
-      "category": ["ZFIN tracks"],
       "adapter": {
         "type": "NCListAdapter",
         "rootUrlTemplate": {
@@ -355,7 +353,6 @@
           "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/tracks/ZFIN_Gene/{refseq}/trackData.jsonz"
         }
       },
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
       },
@@ -386,7 +383,6 @@
           "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/GRCz10/tracks/ZFIN_Gene/{refseq}/trackData.jsonz"
         }
       },
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
       },
@@ -410,7 +406,6 @@
       "trackId": "zfin_genes_with_phenotype",
       "name": "ZFIN Genes with Phenotype",
       "assemblyNames": ["GRCz11"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.gene_id+' \">'+feature.name+'</a>'}"
       },
@@ -437,7 +432,6 @@
       "trackId": "GRCz10_zfin_genes_with_phenotype",
       "name": "ZFIN Genes with Phenotype",
       "assemblyNames": ["GRCz10"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.gene_id+' \">'+feature.name+'</a>'}"
       },
@@ -464,7 +458,6 @@
       "trackId": "zfin_genes_with_antibody_data",
       "name": "ZFIN Genes with Antibody Data",
       "assemblyNames": ["GRCz11"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.gene_id+' \">'+feature.name+'</a>'}"
       },
@@ -491,7 +484,6 @@
       "trackId": "GRCz10_zfin_genes_with_antibody_data",
       "name": "ZFIN Genes with Antibody Data",
       "assemblyNames": ["GRCz10"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.gene_id+' \">'+feature.name+'</a>'}"
       },
@@ -518,7 +510,6 @@
       "trackId": "zfin_genes_with_expression",
       "name": "ZFIN Genes with Expression",
       "assemblyNames": ["GRCz11"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.gene_id+' \">'+feature.name+'</a>'}"
       },
@@ -545,7 +536,6 @@
       "trackId": "GRCz10_zfin_genes_with_expression",
       "name": "ZFIN Genes with Expression",
       "assemblyNames": ["GRCz10"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.gene_id+' \">'+feature.name+'</a>'}"
       },
@@ -572,7 +562,6 @@
       "trackId": "zfin_complete_assembly_clones",
       "name": "Complete Assembly Clones",
       "assemblyNames": ["GRCz11"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
       },
@@ -604,7 +593,6 @@
       "trackId": "GRCz10_zfin_complete_assembly_clones",
       "name": "Complete Assembly Clones",
       "assemblyNames": ["GRCz10"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
       },
@@ -636,7 +624,6 @@
       "trackId": "zfin_additional_transcripts",
       "name": "Additional Transcripts",
       "assemblyNames": ["GRCz11"],
-      "category": ["ZFIN tracks"],
       "adapter": {
         "type": "NCListAdapter",
         "rootUrlTemplate": {
@@ -664,7 +651,6 @@
       "trackId": "zfin_knockdown_reagent",
       "name": "Knockdown Reagent",
       "assemblyNames": ["GRCz11"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
       },
@@ -695,7 +681,6 @@
       "trackId": "GRCz10_zfin_knockdown_reagent",
       "name": "Knockdown Reagent",
       "assemblyNames": ["GRCz10"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
       },
@@ -726,7 +711,6 @@
       "trackId": "zfin_assembly",
       "name": "Assembly",
       "assemblyNames": ["GRCz11"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
       },
@@ -757,7 +741,6 @@
       "trackId": "GRCz10_zfin_assembly",
       "name": "Assembly",
       "assemblyNames": ["GRCz10"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
       },
@@ -788,7 +771,6 @@
       "trackId": "zfin_zebrafish_mutation_project",
       "name": "Zebrafish Mutation Project",
       "assemblyNames": ["GRCz11"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
       },
@@ -819,7 +801,6 @@
       "trackId": "GRCz10_zfin_zebrafish_mutation_project",
       "name": "Zebrafish Mutation Project",
       "assemblyNames": ["GRCz10"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
       },
@@ -850,7 +831,6 @@
       "trackId": "zfin_features",
       "name": "ZFIN Features",
       "assemblyNames": ["GRCz11"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
       },
@@ -881,7 +861,6 @@
       "trackId": "zfin_transgenic_insertion",
       "name": "Transgenic Insertion",
       "assemblyNames": ["GRCz11"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
       },
@@ -912,7 +891,6 @@
       "trackId": "GRCz10_zfin_transgenic_insertion",
       "name": "Transgenic Insertion",
       "assemblyNames": ["GRCz10"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
       },
@@ -943,7 +921,6 @@
       "trackId": "GRCz10_zfin_mutants",
       "name": "ZFIN Mutants",
       "assemblyNames": ["GRCz10"],
-      "category": ["ZFIN tracks"],
       "formatDetails": {
         "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
       },
