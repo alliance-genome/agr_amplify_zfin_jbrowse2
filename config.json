@@ -798,6 +798,36 @@
     },
     {
       "type": "FeatureTrack",
+      "trackId": "zfin_zebrafish_mutation_project-GRCz12tu",
+      "name": "Zebrafish Mutation Project",
+      "assemblyNames": ["GRCz12tu"],
+      "formatDetails": {
+        "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
+      },
+      "adapter": {
+        "type": "NCListAdapter",
+        "rootUrlTemplate": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/GRCz12tu/tracks/Zebrafish_Mutation_Project/{refseq}/trackData.jsonz"
+        }
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "zebrafish_mutation_project-GRCz12tu-LinearBasicDisplay",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "color1": "#800080"
+          }
+        },
+        {
+          "type": "LinearArcDisplay",
+          "displayId": "zebrafish_mutation_project-GRCz12tu-LinearArcDisplay"
+        }
+      ]
+    },
+    {
+      "type": "FeatureTrack",
       "trackId": "GRCz10_zfin_zebrafish_mutation_project",
       "name": "Zebrafish Mutation Project",
       "assemblyNames": ["GRCz10"],
@@ -853,6 +883,36 @@
         {
           "type": "LinearArcDisplay",
           "displayId": "zfin_features-1687908884139-LinearArcDisplay"
+        }
+      ]
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "zfin_features-GRCz12tu",
+      "name": "ZFIN Features",
+      "assemblyNames": ["GRCz12tu"],
+      "formatDetails": {
+        "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
+      },
+      "adapter": {
+        "type": "NCListAdapter",
+        "rootUrlTemplate": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/GRCz12tu/tracks/ZFIN_Features/{refseq}/trackData.jsonz"
+        }
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "zfin_features-GRCz12tu-LinearBasicDisplay",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "color1": "#800080"
+          }
+        },
+        {
+          "type": "LinearArcDisplay",
+          "displayId": "zfin_features-GRCz12tu-LinearArcDisplay"
         }
       ]
     },
