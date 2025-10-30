@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <script
+      src="//unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="//unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="//unpkg.com/@jbrowse/react-linear-genome-view/dist/react-linear-genome-view.umd.development.js"
+      crossorigin
+    ></script>
+  </head>
+  <body>
+    <h1>We're using JBrowse Linear Genome View!</h1>
+    <div id="jbrowse_linear_genome_view"></div>
+    <script type="module">
+      import assembly from "./GRCz11_assembly.js";
+      import tracks from "./GRCz11_tracks.js";
+      const { createViewState, JBrowseLinearGenomeView } =
+        JBrowseReactLinearGenomeView;
+      const { createElement } = React;
+      const { render } = ReactDOM;
+      const state = new createViewState({
+        assembly,
+        tracks,
+        location: "18:20,676,475..20,723,994",
+        defaultSession: {
+          id: "xuiW7e-84l-WyGvJThU1o",
+          name: "zfin embedded session",
+          view: {
+            id: "gxMQbZE1BobjoKsdDLeNw",
+            type: "LinearGenomeView",
+            tracks: [
+              {
+                id: "kQkVaBRWUDUWk7KgE4YFT",
+                type: "FeatureTrack",
+                configuration: "zfin_transcript",
+                displays: [
+                  {
+                    id: "YdoEISkbaWh2Wr_sEhYpi",
+                    type: "LinearBasicDisplay",
+                    configuration:
+                      "transcript-1687907635485-LinearBasicDisplay",
+                  },
+                ],
+              },
+            ],
+          },
+        },
+      });
+      render(
+        createElement(JBrowseLinearGenomeView, { viewState: state }),
+        document.getElementById("jbrowse_linear_genome_view"),
+      );
+    </script>
+  </body>
+</html>

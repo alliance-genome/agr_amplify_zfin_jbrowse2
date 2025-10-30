@@ -9,6 +9,28 @@
     install(pluginManager) {
       const React = pluginManager.jbrequire('react')
 
+      pluginManager.addToExtensionPoint(
+        'Core-handleUnrecognizedAssembly',
+        (_defaultResult, { assemblyName, session }) => {
+          const jb2asm = `jb2hub-${assemblyName}`
+          if (
+            assemblyName &&
+            !session.connections.find(f => f.connectionId === jb2asm)
+          ) {
+            console.log('getUnrecognizedAssembly', { assemblyName })
+            const conf = {
+              type: 'JB2TrackHubConnection',
+              uri: 'http://localhost:3000/test_data/volvox/config2.json',
+              name: 'my conn',
+              assemblyNames: [assemblyName],
+              connectionId: jb2asm,
+            }
+            session.addConnectionConf(conf)
+            session.makeConnection(conf)
+          }
+        },
+      )
+
       function NewAboutComponent() {
         return React.createElement(
           'div',
@@ -117,7 +139,7 @@
       pluginManager.addToExtensionPoint(
         'Core-replaceWidget',
         (DefaultWidget, { model }) => {
-          return model.trackId === 'volvox.inv.vcf'
+          return model.trackId === 'volvox_sv_test_renamed'
             ? ReplaceFeatureWidget
             : DefaultWidget
         },
@@ -132,7 +154,17 @@
       })
     }
 
-    configure(/* pluginManager */) {}
+    configure(pluginManager) {
+      pluginManager.jexl.addFunction('repeatColor', feature => {
+        let type = feature.get('repeatClass')
+        return {
+          R: '#00A000',
+          RC: '#FF7F00',
+          F: '#8b0000',
+          C: '#0000FF',
+        }[type]
+      })
+    }
   }
 
   // the plugin will be included in both the main thread and web worker, so
