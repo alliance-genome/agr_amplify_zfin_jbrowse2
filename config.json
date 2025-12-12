@@ -67,6 +67,14 @@
       "assemblyNames": ["GRCz10"],
       "type": "JBrowse1TextSearchAdapter",
       "textSearchAdapterId": "GRCz10_generate-names-index"
+    },
+    {
+      "namesIndexLocation": {
+        "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/Zv9/names/"
+      },
+      "assemblyNames": ["Zv9"],
+      "type": "JBrowse1TextSearchAdapter",
+      "textSearchAdapterId": "Zv9_generate-names-index"
     }
   ],
   "assemblies": [
@@ -173,6 +181,39 @@
           {
             "type": "LinearGCContentDisplay",
             "displayId": "GRCz10_refseq-LinearGCContentDisplay"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Zv9",
+      "displayName": "Danio rerio (Zv9)",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "trackId": "Zv9_refseq",
+        "adapter": {
+          "type": "BgzipFastaAdapter",
+          "fastaLocation": {
+            "locationType": "UriLocation",
+            "uri": "https://s3.amazonaws.com/agrjbrowse/fasta/Zv9_toplevel.fa.gz"
+          },
+          "faiLocation": {
+            "locationType": "UriLocation",
+            "uri": "https://s3.amazonaws.com/agrjbrowse/fasta/Zv9_toplevel.fa.gz.fai"
+          },
+          "gziLocation": {
+            "locationType": "UriLocation",
+            "uri": "https://s3.amazonaws.com/agrjbrowse/fasta/Zv9_toplevel.fa.gz.gzi"
+          }
+        },
+        "displays": [
+          {
+            "type": "LinearReferenceSequenceDisplay",
+            "displayId": "Zv9_refseq-LinearReferenceSequenceDisplay"
+          },
+          {
+            "type": "LinearGCContentDisplay",
+            "displayId": "Zv9_refseq-LinearGCContentDisplay"
           }
         ]
       }
@@ -1003,6 +1044,66 @@
         {
           "type": "LinearArcDisplay",
           "displayId": "GRCz10_zfin_mutants-LinearArcDisplay"
+        }
+      ]
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "Zv9_zfin_transgenic_insertion",
+      "name": "Transgenic Insertion",
+      "assemblyNames": ["Zv9"],
+      "formatDetails": {
+        "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
+      },
+      "adapter": {
+        "type": "NCListAdapter",
+        "rootUrlTemplate": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/Zv9/tracks/Transgenic_Insertion/{refseq}/trackData.jsonz"
+        }
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "Zv9_transgenic_insertion-1687908986143-LinearBasicDisplay",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "color1": "#7135B3"
+          }
+        },
+        {
+          "type": "LinearArcDisplay",
+          "displayId": "Zv9_transgenic_insertion-1687908986143-LinearArcDisplay"
+        }
+      ]
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "Zv9_zfin_mutants",
+      "name": "ZFIN Mutants",
+      "assemblyNames": ["Zv9"],
+      "formatDetails": {
+        "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.id+' \">'+feature.name+'</a>'}"
+      },
+      "adapter": {
+        "type": "NCListAdapter",
+        "rootUrlTemplate": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/Zv9/tracks/ZFIN Mutants/{refseq}/trackData.jsonz"
+        }
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "Zv9_zfin_mutants-LinearBasicDisplay",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "color1": "goldenrod"
+          }
+        },
+        {
+          "type": "LinearArcDisplay",
+          "displayId": "Zv9_zfin_mutants-LinearArcDisplay"
         }
       ]
     }
