@@ -713,6 +713,32 @@
     },
     {
       "type": "FeatureTrack",
+      "trackId": "Zv9_zfin_genes_with_expression",
+      "name": "ZFIN Genes with Expression",
+      "assemblyNames": ["Zv9"],
+      "formatDetails": {
+        "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.gene_id+' \">'+feature.name+'</a>'}"
+      },
+      "adapter": {
+        "type": "NCListAdapter",
+        "rootUrlTemplate": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/Zv9/tracks/ZFIN_Genes_with_Expression/{refseq}/trackData.jsonz"
+        }
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "Zv9_zfin_genes_with_expression-1687908166699-LinearBasicDisplay"
+        },
+        {
+          "type": "LinearArcDisplay",
+          "displayId": "Zv9_zfin_genes_with_expression-1687908166699-LinearArcDisplay"
+        }
+      ]
+    },
+    {
+      "type": "FeatureTrack",
       "trackId": "zfin_complete_assembly_clones",
       "name": "Complete Assembly Clones",
       "assemblyNames": ["GRCz11"],
@@ -770,6 +796,37 @@
         {
           "type": "LinearArcDisplay",
           "displayId": "GRCz10_complete_assembly_clones-1687908227633-LinearArcDisplay"
+        }
+      ]
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "Zv9_zfin_complete_assembly_clones",
+      "name": "Complete Assembly Clones",
+      "assemblyNames": ["Zv9"],
+      "formatDetails": {
+        "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
+      },
+      "adapter": {
+        "type": "NCListAdapter",
+        "rootUrlTemplate": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/Zv9/tracks/Complete_Assembly_Clones/{refseq}/trackData.jsonz"
+        }
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "Zv9_complete_assembly_clones-1687908227633-LinearBasicDisplay",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "color1": "white",
+            "outline": "#8CADF1"
+          }
+        },
+        {
+          "type": "LinearArcDisplay",
+          "displayId": "Zv9_complete_assembly_clones-1687908227633-LinearArcDisplay"
         }
       ]
     },
