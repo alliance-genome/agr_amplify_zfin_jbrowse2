@@ -1009,6 +1009,36 @@
     },
     {
       "type": "FeatureTrack",
+      "trackId": "Zv9_zfin_assembly",
+      "name": "Assembly",
+      "assemblyNames": ["Zv9"],
+      "formatDetails": {
+        "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
+      },
+      "adapter": {
+        "type": "NCListAdapter",
+        "rootUrlTemplate": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/Zv9/tracks/Assembly/{refseq}/trackData.jsonz"
+        }
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "Zv9_assembly-1687908614561-LinearBasicDisplay",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "color1": "#6792ED"
+          }
+        },
+        {
+          "type": "LinearArcDisplay",
+          "displayId": "Zv9_assembly-1687908614561-LinearArcDisplay"
+        }
+      ]
+    },
+    {
+      "type": "FeatureTrack",
       "trackId": "zfin_zebrafish_mutation_project",
       "name": "Zebrafish Mutation Project",
       "assemblyNames": ["GRCz11"],
