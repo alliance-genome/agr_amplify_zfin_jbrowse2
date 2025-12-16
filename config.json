@@ -473,6 +473,36 @@
         }
       ]
     },
+        {
+      "type": "FeatureTrack",
+      "trackId": "Zv9_zfin_transcript",
+      "name": "Transcript",
+      "assemblyNames": ["Zv9"],
+      "adapter": {
+        "type": "NCListAdapter",
+        "rootUrlTemplate": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/Zv9/tracks/ZFIN_Gene/{refseq}/trackData.jsonz"
+        }
+      },
+      "formatDetails": {
+        "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.id+' \">'+ feature.name+'</a>'}"
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "Zv9_transcript-1687907635485-LinearBasicDisplay",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "color1": "#6792ED"
+          }
+        },
+        {
+          "type": "LinearArcDisplay",
+          "displayId": "Zv9_transcript-1687907635485-LinearArcDisplay"
+        }
+      ]
+    },
     {
       "type": "FeatureTrack",
       "trackId": "zfin_genes_with_phenotype",
