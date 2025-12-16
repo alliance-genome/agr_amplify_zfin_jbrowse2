@@ -919,6 +919,36 @@
     },
     {
       "type": "FeatureTrack",
+      "trackId": "Zv9_zfin_knockdown_reagent",
+      "name": "Knockdown Reagent",
+      "assemblyNames": ["Zv9"],
+      "formatDetails": {
+        "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.zdb_id+' \">'+feature.name+'</a>'}"
+      },
+      "adapter": {
+        "type": "NCListAdapter",
+        "rootUrlTemplate": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/Zv9/tracks/Knockdown_Reagent/{refseq}/trackData.jsonz"
+        }
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "Zv9_knockdown_reagent-1687908500113-LinearBasicDisplay",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "color1": "#3DB471"
+          }
+        },
+        {
+          "type": "LinearArcDisplay",
+          "displayId": "Zv9_knockdown_reagent-1687908500113-LinearArcDisplay"
+        }
+      ]
+    },
+    {
+      "type": "FeatureTrack",
       "trackId": "zfin_assembly",
       "name": "Assembly",
       "assemblyNames": ["GRCz11"],
