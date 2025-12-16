@@ -635,6 +635,32 @@
     },
     {
       "type": "FeatureTrack",
+      "trackId": "Zv9_zfin_genes_with_antibody_data",
+      "name": "ZFIN Genes with Antibody Data",
+      "assemblyNames": ["Zv9"],
+      "formatDetails": {
+        "feature": "jexl:{ ZFIN: '<a href=\"http://zfin.org/'+feature.gene_id+' \">'+feature.name+'</a>'}"
+      },
+      "adapter": {
+        "type": "NCListAdapter",
+        "rootUrlTemplate": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/Zv9/tracks/ZFIN_Genes_with_Antibody_Data/{refseq}/trackData.jsonz"
+        }
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "Zv9_zfin_genes_with_antibody_data-1687908124039-LinearBasicDisplay"
+        },
+        {
+          "type": "LinearArcDisplay",
+          "displayId": "Zv9_zfin_genes_with_antibody_data-1687908124039-LinearArcDisplay"
+        }
+      ]
+    },
+    {
+      "type": "FeatureTrack",
       "trackId": "zfin_genes_with_expression",
       "name": "ZFIN Genes with Expression",
       "assemblyNames": ["GRCz11"],
