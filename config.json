@@ -869,7 +869,7 @@
         "type": "NCListAdapter",
         "rootUrlTemplate": {
           "locationType": "UriLocation",
-          "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/tracks/GRCz12tu/Knockdown_Reagents/{refseq}/trackData.jsonz"
+          "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/GRCz12tu/tracks/Knockdown_Reagents/{refseq}/trackData.jsonz"
         }
       },
       "displays": [
