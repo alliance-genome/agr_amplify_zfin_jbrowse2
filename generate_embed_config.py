@@ -16,6 +16,14 @@ for track in data["tracks"]:
     if track["assemblyNames"][0] == "GRCz10":
         z10.append(track)
     if track["assemblyNames"][0] == "GRCz11":
+        if ("renderer" in track["displays"][0] and "color1" in track["displays"][0]["renderer"]) and (track["displays"][0]["renderer"]["color1"] == "jexl:variantColor(feature)" or track["displays"][0]["renderer"]["color1"] == "jexl:htVariantColor(feature)" ):
+            del track["displays"][0]["renderer"]["color1"] 
+        if "renderer" in track["displays"][0] and "labels" in track["displays"][0]["renderer"] and "name" in track["displays"][0]["renderer"]["labels"] and track["displays"][0]["renderer"]["labels"]["name"] == "jexl:variantLabel(feature)":
+            del track["displays"][0]["renderer"]["labels"]["name"]
+        if "renderer" in track["displays"][0] and "labels" in track["displays"][0]["renderer"] and "description" in track["displays"][0]["renderer"]["labels"] and track["displays"][0]["renderer"]["labels"]["description"] == "jexl:variantDescription(feature)":
+            del track["displays"][0]["renderer"]["labels"]["description"]
+        if "renderer" in track["displays"][0] and "labels" in track["displays"][0]["renderer"] and len(track["displays"][0]["renderer"]["labels"]) == 0:
+            del track["displays"][0]["renderer"]["labels"]
         z11.append(track)
     if track["assemblyNames"][0] == "Zv9":
         z9.append(track)
