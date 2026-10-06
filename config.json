@@ -1085,6 +1085,44 @@
       ]
     },
     {
+      "type": "VariantTrack",
+      "trackId": "zfin_htp_variants_9.0.0",
+      "name": "HTP Variants (Alliance 9.0.0)",
+      "assemblyNames": ["GRCz11"],
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "vcfGzLocation": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/VCF/9.0.0/HTPOSTVEPVCF_ZFIN_latest.vcf.gz"
+        },
+        "index": {
+          "location": {
+            "locationType": "UriLocation",
+            "uri": "https://s3.amazonaws.com/agrjbrowse/VCF/9.0.0/HTPOSTVEPVCF_ZFIN_latest.vcf.gz.tbi"
+          }
+        }
+      },
+      "displays": [
+        {
+          "renderer": {
+            "maxHeight": 5000,
+            "type": "SvgFeatureRenderer",
+            "labels": {
+              "name": "jexl:variantLabel(feature)",
+              "description": "jexl:variantDescription(feature)"
+            },
+            "color1": "jexl:htVariantColor(feature)"
+          },
+          "type": "LinearVariantDisplay",
+          "displayId": "zfin_htp_variants_9.0.0-LinearVariantDisplay"
+        },
+        {
+          "type": "ChordVariantDisplay",
+          "displayId": "zfin_htp_variants_9.0.0-ChordVariantDisplay"
+        }
+      ]
+    },
+    {
       "type": "FeatureTrack",
       "trackId": "GRCz10_zfin_assembly",
       "name": "Assembly",
