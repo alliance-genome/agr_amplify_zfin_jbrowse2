@@ -267,6 +267,45 @@
   ]
 },
     {
+      "type": "SyntenyTrack",
+      "trackId": "grcz12tu_vs_grcz11_minimap2_asm5_pif",
+      "name": "GRCz12tu vs GRCz11 minimap2 asm5 PIF",
+      "assemblyNames": ["GRCz11", "GRCz12tu"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "pifGzLocation": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/comparative/GRCz12tu_vs_GRCz11.minimap2.asm5.pif.gz"
+        },
+        "index": {
+          "location": {
+            "locationType": "UriLocation",
+            "uri": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/zfin/comparative/GRCz12tu_vs_GRCz11.minimap2.asm5.pif.gz.tbi"
+          },
+          "indexType": "TBI"
+        },
+        "assemblyNames": ["GRCz11", "GRCz12tu"]
+      },
+      "displays": [
+        {
+          "type": "DotplotDisplay",
+          "displayId": "grcz12tu_vs_grcz11_minimap2_asm5_pif-DotplotDisplay"
+        },
+        {
+          "type": "LinearComparativeDisplay",
+          "displayId": "grcz12tu_vs_grcz11_minimap2_asm5_pif-LinearComparativeDisplay"
+        },
+        {
+          "type": "LinearSyntenyDisplay",
+          "displayId": "grcz12tu_vs_grcz11_minimap2_asm5_pif-LinearSyntenyDisplay"
+        },
+        {
+          "type": "LGVSyntenyDisplay",
+          "displayId": "grcz12tu_vs_grcz11_minimap2_asm5_pif-LGVSyntenyDisplay"
+        }
+      ]
+    },
+    {
   "type": "FeatureTrack",
   "trackId": "zfin-gene12",
   "name": "ZFIN Gene",
@@ -1435,5 +1474,29 @@
         }
       ]
     }
-  ]
+
+  ],
+  "defaultSession": {
+    "name": "GRCz12tu default with gridlines",
+    "views": [
+      {
+        "id": "grcz12tu-gridlines-default-view",
+        "type": "LinearGenomeView",
+        "assemblyNames": ["GRCz12tu"],
+        "tracks": [],
+        "hideHeader": false,
+        "hideHeaderOverview": false,
+        "hideNoTracksActive": false,
+        "trackSelectorType": "hierarchical",
+        "showCenterLine": false,
+        "showCytobandsSetting": true,
+        "trackLabels": "offset",
+        "showGridlines": true,
+        "highlight": [],
+        "showTrackOutlines": true,
+        "bookmarkHighlightsVisible": true,
+        "bookmarkLabelsVisible": true
+      }
+    ]
+  }
 }
