@@ -1008,6 +1008,88 @@
       ]
     },
     {
+      "type": "VariantTrack",
+      "trackId": "zfin_variants_9.0.0",
+      "name": "Variants (Alliance 9.0.0)",
+      "assemblyNames": ["GRCz11"],
+      "metadata": {
+        "about this track": "Variant calls from the Alliance of Genome Resources 9.0.0 release."
+      },
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "vcfGzLocation": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/VCF/9.0.0/zebrafish-latest.vcf.gz"
+        },
+        "index": {
+          "location": {
+            "locationType": "UriLocation",
+            "uri": "https://s3.amazonaws.com/agrjbrowse/VCF/9.0.0/zebrafish-latest.vcf.gz.tbi"
+          }
+        }
+      },
+      "displays": [
+        {
+          "renderer": {
+            "maxHeight": 5000,
+            "type": "SvgFeatureRenderer",
+            "labels": {
+              "name": "jexl:variantLabel(feature)",
+              "description": "jexl:variantDescription(feature)"
+            },
+            "color1": "jexl:variantColor(feature)"
+          },
+          "type": "LinearVariantDisplay",
+          "displayId": "zfin_variants_9.0.0-LinearVariantDisplay"
+        },
+        {
+          "type": "ChordVariantDisplay",
+          "displayId": "zfin_variants_9.0.0-ChordVariantDisplay"
+        }
+      ]
+    },
+    {
+      "type": "VariantTrack",
+      "trackId": "zfin_htp_variants_9.0.0",
+      "name": "HTP Variants (Alliance 9.0.0)",
+      "assemblyNames": ["GRCz11"],
+      "metadata": {
+        "about this track": "High-throughput variant calls from the Alliance of Genome Resources 9.0.0 release."
+      },
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "vcfGzLocation": {
+          "locationType": "UriLocation",
+          "uri": "https://s3.amazonaws.com/agrjbrowse/VCF/9.0.0/HTPOSTVEPVCF_ZFIN_latest.vcf.gz"
+        },
+        "index": {
+          "location": {
+            "locationType": "UriLocation",
+            "uri": "https://s3.amazonaws.com/agrjbrowse/VCF/9.0.0/HTPOSTVEPVCF_ZFIN_latest.vcf.gz.tbi"
+          }
+        }
+      },
+      "displays": [
+        {
+          "renderer": {
+            "maxHeight": 5000,
+            "type": "SvgFeatureRenderer",
+            "labels": {
+              "name": "jexl:variantLabel(feature)",
+              "description": "jexl:variantDescription(feature)"
+            },
+            "color1": "jexl:htVariantColor(feature)"
+          },
+          "type": "LinearVariantDisplay",
+          "displayId": "zfin_htp_variants_9.0.0-LinearVariantDisplay"
+        },
+        {
+          "type": "ChordVariantDisplay",
+          "displayId": "zfin_htp_variants_9.0.0-ChordVariantDisplay"
+        }
+      ]
+    },
+    {
       "type": "FeatureTrack",
       "trackId": "GRCz10_zfin_assembly",
       "name": "Assembly",
@@ -1397,5 +1479,29 @@
         }
       ]
     }
-  ]
+
+  ],
+  "defaultSession": {
+    "name": "GRCz12tu default with gridlines",
+    "views": [
+      {
+        "id": "grcz12tu-gridlines-default-view",
+        "type": "LinearGenomeView",
+        "assemblyNames": ["GRCz12tu"],
+        "tracks": [],
+        "hideHeader": false,
+        "hideHeaderOverview": false,
+        "hideNoTracksActive": false,
+        "trackSelectorType": "hierarchical",
+        "showCenterLine": false,
+        "showCytobandsSetting": true,
+        "trackLabels": "offset",
+        "showGridlines": true,
+        "highlight": [],
+        "showTrackOutlines": true,
+        "bookmarkHighlightsVisible": true,
+        "bookmarkLabelsVisible": true
+      }
+    ]
+  }
 }
