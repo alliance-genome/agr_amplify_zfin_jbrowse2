@@ -6,8 +6,17 @@
     install(pluginManager) {
       pluginManager.jexl.addFunction('variantDescription', f => {
 
-    var type = f.get('INFO').soTerm;
-    type = type[0];
+    var info = f.get('INFO');
+    var soTerm = info.soTerm;
+    var type;
+    if (! (typeof soTerm === 'undefined') ) {
+        // the 9.0.0 VCF wraps INFO string values in literal double quotes
+        type = soTerm[0].replace(/^"|"$/g, '');
+    } else if (! (typeof info.CSQ === 'undefined') && info.CSQ[0]) {
+        type = info.CSQ[0].split('|')[1] || 'variant';
+    } else {
+        type = 'variant';
+    }
     if (type == 'point_mutation') {
         type = 'SNV';
     }
