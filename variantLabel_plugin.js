@@ -6,9 +6,10 @@
     install(pluginManager) {
       pluginManager.jexl.addFunction('variantLabel', f => {
 
-        const symbols = f.get('INFO').allele_symbols 
+        const symbols = f.get('INFO').allele_symbols
         if (! (typeof symbols=== 'undefined') ) {
-            var temp = symbols[0].replace('<sup>', '<').replace('</sup>','>');
+            // the 9.0.0 VCF wraps INFO string values in literal double quotes
+            var temp = symbols[0].replace(/^"|"$/g, '').replace('<sup>', '<').replace('</sup>','>');
             return temp;
         }
 

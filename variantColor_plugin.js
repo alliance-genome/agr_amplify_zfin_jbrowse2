@@ -5,7 +5,8 @@
 
     install(pluginManager) {
       pluginManager.jexl.addFunction('variantColor', f => {
-            const geneImpact = f.get('INFO')?.geneImpact?.[0]
+            // the 9.0.0 VCF wraps INFO string values in literal double quotes
+            const geneImpact = f.get('INFO')?.geneImpact?.[0]?.replace(/^"|"$/g, '')
             if(geneImpact==='HIGH')     { return 'red' }
             if(geneImpact==='MODIFIER') { return 'purple' }
             if(geneImpact==='MODERATE') { return 'gold' }
